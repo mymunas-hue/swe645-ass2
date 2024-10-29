@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <!-- Bootstrap CSS for responsive layout and styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts for custom typography -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+        }
+        /* Header styling */
+        .header {
+            background-color: #006633;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Styling the GMU logo in the header */
+        .header img {
+            width: 100px;
+            height: auto;
+        }
+        /* Styling the title within the header */
+        .header h1 {
+            color: #006633;
+            border: 5px solid #006633;
+            padding: 10px;
+            background-color: #FFCC33;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Container styling for the form */
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        /* Styling for labels in the form */
+        label {
+            font-weight: 600;
+        }
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #006633;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <!-- GMU Logo -->
+        <img src="gmu-logo.png" alt="GMU Logo">
+        <!-- Title of the form -->
+        <h1>Student Survey Form</h1>
+        <!-- Navigation link to the homepage -->
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-light" href="./homepage.html">Home</a>
+        </nav>
+    </div>
+
+    <!-- Survey Form Section -->
+    <div class="container">
+        <h2 class="text-center" style="color: #006633;">Your Feedback Matters!</h2>
+        <p class="text-center">Please fill out the form below to share your feedback about your visit to our campus.</p>
+        <form autocomplete="on">
+            <!-- Full Name Input Field -->
+            <div class="form-group">
+                <label for="username">Full Name*</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your name" required autofocus>
+            </div>
+
+            <!-- Address Input Fields -->
+            <div class="form-group">
+                <label for="street">Street Address*</label>
+                <input type="text" class="form-control" id="street" name="street" placeholder="Enter your street address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City*</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State*</label>
+                <input type="text" class="form-control" id="state" name="state" placeholder="Enter your state" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code*</label>
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="Enter your zip code" pattern="[0-9]{5}" required>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="phone">Telephone Number*</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Format: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail*</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="url">LinkedIn URL</label>
+                <input type="url" class="form-control" id="url" name="url" placeholder="https://www.linkedin.com/in/your-profile">
+            </div>
+
+            <!-- Date of Survey -->
+            <div class="form-group">
+                <label for="date">Date of Survey*</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+
+            <!-- Checkbox for Campus Feedback -->
+            <fieldset class="form-group">
+                <legend>What did you like most about the campus? (Check all that apply)*</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="students" value="students">
+                    <label class="form-check-label" for="students">Students</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="location" value="location">
+                    <label class="form-check-label" for="location">Location</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="campus" value="campus">
+                    <label class="form-check-label" for="campus">Campus</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="atmosphere" value="atmosphere">
+                    <label class="form-check-label" for="atmosphere">Atmosphere</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="dormRooms" value="dormRooms">
+                    <label class="form-check-label" for="dormRooms">Dorm Rooms</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="sports" value="sports">
+                    <label class="form-check-label" for="sports">Sports</label>
+                </div>
+            </fieldset>
+
+            <!-- Radio Buttons for Interest -->
+            <fieldset class="form-group">
+                <legend>How did you become interested in the university?*</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="friends" name="interest" value="friends" required>
+                    <label class="form-check-label" for="friends">Friends</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="television" name="interest" value="television" required>
+                    <label class="form-check-label" for="television">Television</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="internet" name="interest" value="internet" required>
+                    <label class="form-check-label" for="internet">Internet</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="other" name="interest" value="other" required>
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </fieldset>
+
+            <!-- Datalist for High School Graduation Month -->
+            <div class="form-group">
+                <label for="gradMonth">High School Graduation Month*</label>
+                <input class="form-control" list="months" id="gradMonth" placeholder="Select your month" required>
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+            </div>
+
+            <!-- Graduation Year -->
+            <div class="form-group">
+                <label for="gradYear">Graduation Year*</label>
+                <input type="text" class="form-control" id="gradYear" placeholder="Enter your graduation year" pattern="[0-9]{4}" required>
+            </div>
+
+            <!-- Additional Comments Section -->
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea class="form-control" id="comments" rows="4" placeholder="Enter any additional comments here..."></textarea>
+            </div>
+
+            <!-- Recommendation Dropdown -->
+            <div class="form-group">
+                <label for="recommend">How likely are you to recommend GMU to others?*</label>
+                <select id="recommend" class="form-control" required>
+                    <option value="veryLikely">Very Likely</option>
+                    <option value="likely">Likely</option>
+                    <option value="unlikely">Unlikely</option>
+                </select>
+            </div>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 George Mason University
+    </footer>
+
+</body>
+</html>
