@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mona's Homepage</title>
+    <!-- Link to W3.CSS for responsive design and some styles -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Fonts for custom fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:400,700&display=swap">
+    <style>
+        /* General body and typography styling */
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        /* Styling for main header text with yellow background */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #006633; /* GMU green for the text */
+            padding: 20px 0; 
+            background-color: #FFCC33; /* GMU yellow background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for elegance */
+        }
+        /* GMU green color for About Me section */
+        h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #006633; /* GMU green */
+        }
+        /* Main header styling */
+        .main-header {
+            background-color: #006633; /* GMU green */
+            color: #fff;
+            height: 300px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* To position the logo */
+            padding: 20px;
+        }
+        /* GMU logo positioning and size */
+        .main-header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px; /* Adjust size as needed */
+        }
+        /* Main content styling */
+        .main-content {
+            margin-top: -50px; /* Negative margin to overlap the content over the header */
+        }
+        /* Card style for sections */
+        .card {
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        /* About Me and About Page styling */
+        .about-me, .about-page {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .about-me img {
+            border-radius: 50%;
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        .about-me h3, .about-page h2 {
+            margin-bottom: 10px;
+        }
+        .about-page p {
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        /* Button container for the survey button */
+        .button-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        /* Styling for the survey button */
+        .survey-btn {
+            background-color: #FFCC33; /* GMU yellow */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        /* Hover effect for survey button */
+        .survey-btn:hover {
+            background-color: #d35400; /* Darker orange for hover effect */
+        }
+        /* Styling for links */
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header class="main-header w3-container">
+        <!-- GMU logo in the top-left corner -->
+        <img src="gmu-logo.png" alt="GMU Logo">
+        <h1>Welcome to Mymuna's Homepage</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="w3-content main-content" style="max-width:1100px">
+        <div class="w3-row-padding">
+            <!-- About Me Section -->
+            <div class="w3-third">
+                <div class="card about-me w3-margin-bottom">
+                    <!-- Profile Picture -->
+                    <img src="me.jpg" alt="Profile Picture">
+                    <h3>Mymuna Sultana</h3> <!-- Name in GMU green -->
+                    <p>Email: smymuna@gmu.edu</p>
+                    <p>Mobile: +1(571)564-5986</p>
+                </div>
+            </div>
+
+            <!-- About Me Section -->
+            <div class="w3-twothird">
+                <div class="card about-page">
+                    <h2>About Me</h2> <!-- Title in GMU green -->
+                    <p>
+                        I am Mymuna Sultana, currently in my second semester of the Master of Science in Computer Science program at George Mason University (G Number: #G01487339). Alongside my academic journey, I am deeply passionate about technology and problem-solving, but I also value a well-rounded life. In my free time, I enjoy reading, particularly fiction and non-fiction that expand my worldview. Traveling is another passion of mine, as it allows me to experience different cultures and perspectives, which I believe enriches both my personal and professional life.
+                    </p>
+                    <p>
+                        I enjoy learning new skills and staying updated with the latest advancements in tech, which reflects my drive for constant improvement. I’m also a curious and creative individual, always eager to explore new ideas, whether through reading, working on personal coding projects, or simply learning something new about the world. This blend of curiosity, creativity, and dedication is what defines me, both in my academic pursuits and personal life.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Survey Button -->
+        <div class="button-container">
+            <a href="http://3.93.16.18/student_survey.html" class="survey-btn">Go to Survey Page</a>
+        </div>
+    </div>
+
+</body>
+</html>
